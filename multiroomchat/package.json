@@ -1,0 +1,14 @@
+{
+    "name": "multiroomchat",
+    "version": "0.0.1",
+    "description": "Minimalist multiroom chat server",
+    "main": "server.js",
+    "author": {
+        "name": "Home",
+        "email": ""
+    },
+    "dependencies": {
+        "socket.io": "~0.9.6",
+        "mime":  "~1.2.7"
+    }
+}
