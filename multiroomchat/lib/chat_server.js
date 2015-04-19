@@ -94,7 +94,7 @@ function handleNameChangeAttempts(socket, nickNames, namesUsed) {
     });
 }
 
-function handleMessageBroadcasting(socket) {
+function handleMessageBroadcasting(socket, nickNames) {
     socket.on('message', function (message) {
         socket.broadcast.to(message.room).emit('message', {
             text: nickNames[socket.id] + ': ' + message.text
