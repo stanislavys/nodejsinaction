@@ -1,0 +1,15 @@
+{
+    "name": "connectsample",
+    "version": "0.0.1",
+    "description": "Connect sample app",
+    "main": "server.js",
+    "author": {
+        "name": "Home",
+        "email": ""
+    },
+    "dependencies": {
+        "connect": "~3.3.5",
+		"socket.io": "~0.9.6",
+        "mime":  "~1.2.7"
+    }
+}
