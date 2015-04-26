@@ -11,7 +11,7 @@ function helloWorld(req, res) {
 }
 
 function authenticateUser(user, pass, cb) {
-	if (user.indexOf('user') == 0) {
+	if (user.indexOf('admin') == 0) {
 		cb();
 	} else {
 		cb(new Error('Wrong username or password.'));
@@ -25,7 +25,7 @@ function restrict(req, res, next) {
 	}
 	
 	var parts = authorization.split(' ');
-	var scheme = parts[0];
+	var scheme = parts[0];	// Basic
 	var auth = new Buffer(parts[1], 'base64').toString().split(':');
 	var user = auth[0];
 	var password = auth[1];
@@ -41,13 +41,13 @@ function restrict(req, res, next) {
 
 function adminConsole(req, res, next) {
 	switch (req.url) {
-		case '/': {
+		case '/': {	// relative to mount point
 			res.end('try /users');
 			break;
 		}
-		case '/users': {
+		case '/users': { // relative to mount point
 			res.setHeader('Content-Type', 'application/json');
-			res.end(JSON.stringify(['user1', 'alice', 'bob']));
+			res.end(JSON.stringify(['admin', 'alice', 'bob']));
 			break;
 		}
 	}

@@ -1,2 +1,2 @@
-Get users:
-curl --user user1:pass http://localhost/admin/users
+Get users
+curl --user admin:pass http://localhost:3000/admin/users
