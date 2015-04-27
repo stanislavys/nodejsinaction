@@ -1,0 +1,5 @@
+List all users
+curl http://localhost:3000/admin/users
+
+Get user 123
+curl http://localhost:3000/admin/user/123
