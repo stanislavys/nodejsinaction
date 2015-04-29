@@ -15,8 +15,8 @@ module.exports = function route(routeTable) {
 			var path = paths[i];
 			var routeHandler = routes[path];
 			path = path
-					.replace(/\//g, '\\/')
-					.replace(/:(\w+)/g, '([^\\/]+)');
+					.replace(/\//g, '\\/') // Cache regular expressions?
+					.replace(/:(\w+)/g, '([^\\/]+)'); // Cache regular expressions?
 			var re = new RegExp('^' + path + '$');
 			var captures = url.pathname.match(re);
 			if (captures) {
