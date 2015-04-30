@@ -1,0 +1,12 @@
+Get user Admin
+curl http://localhost:3000/api/user/admin
+
+Get unknown user:
+curl http://localhost:3000/api/user/unknown
+
+Call undefined and handle with errorHandler:
+http://localhost:3000/api/pet/hydra
+
+
+
+
