@@ -1,0 +1,17 @@
+Set cookies
+Browse: http://localhost:3000/setCookies
+
+Parse JSON body
+curl -X POST http://localhost:3000/bodyParser -H "Content-type:application/json" -d @body.json
+
+Parse POST data
+curl -X POST -d name=tobi http://localhost:3000/bodyParser
+
+Parse GET query data
+curl -X GET http://localhost:3000/queryParser?name=tobi
+
+Upload file:
+curl -F test=@test.txt http://localhost:3000/fileUpload
+
+Upload too large file:
+curl -F test=@large.txt http://localhost:3000/fileUpload
